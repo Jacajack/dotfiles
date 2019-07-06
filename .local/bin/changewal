@@ -1,9 +1,7 @@
 #!/bin/bash
 
-WALLPAPERS="$HOME/.wallpapers"
-
 PICK="$(ls -1q "$WALLPAPERS" | dmenu -i -l 30)"
 [[ -z "$PICK" ]] && exit 0;
 
-echo "$WALLPAPERS/$PICK" > "$HOME/.wallpaper"
+echo "$WALLPAPERS/$PICK" > "$WALLPAPER_FILE"
 setwal 
