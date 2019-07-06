@@ -104,8 +104,8 @@ bar {
 # Application shortcuts
 bindsym $mod+q kill
 bindsym $mod+d exec dmenu_run
-bindsym $mod+Return exec xterm
+bindsym $mod+Return exec $TERMINAL
 bindsym $mod+Shift+m exec urxvt -e ranger
 
 # Startup
-exec --no-startup-id bash ~/.scripts/initwm
+exec --no-startup-id initwm
