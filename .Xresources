@@ -1,0 +1,24 @@
+# --------------------------------------------------- xterm
+
+# UTF-8 and TTF fonts
+XTerm.vt100.locale: true
+XTerm.vt100.renderFont: true
+XTerm.vt100.faceName: Fira Mono
+XTerm.vt100.faceSize: 12
+
+# Black background
+XTerm.vt100.reverseVideo: true
+
+# Save more lines
+XTerm.vt100.saveLines: 10000
+
+# Never go fullscreen
+XTerm.vt100.fullscreen: never
+
+# Selecting URLs (from https://lukas.zapletalovi.com/2013/07/hidden-gems-of-xterm.html, thanks!)
+XTerm.vt100.charClass: 33:48,36-47:48,58-59:48,61:48,63-64:48,95:48,126:48
+XTerm.vt100.on3Clicks: regex ([[:alpha:]]+://)?([[:alnum:]!#+,./=?@_~-]|(%[[:xdigit:]][[:xdigit:]]))+
+
+# Don't send ^H on backspace
+XTerm.vt100.backarrowKey: false
+XTerm.ttyModes: erase ^?
