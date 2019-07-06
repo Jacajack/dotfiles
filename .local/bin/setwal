@@ -1,0 +1,5 @@
+#!/bin/bash
+
+WALLPAPER_FILE="$HOME/.wallpaper"
+
+[[ -f "$WALLPAPER_FILE" ]] && wal -i "$(cat "$WALLPAPER_FILE")"
