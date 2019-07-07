@@ -1,6 +1,12 @@
 #!/bin/sh
 
-[[ -f ~/.Xresources ]] && xrdb -merge -I$HOME ~/.Xresources
+# Load .Xresources for the first time and reload each time the file is modified
+XRESOURCES="$HOME/.Xresources"
+if [[ -f "$XRESOURCES" ]]; then
+	xrdb -merge -I$HOME "$XRESOURCES"
+	echo "$XRESOURCES" | entr -p xrdb -merge -I$HOME "$XRESOURCES" &
+fi
+
 xterm &
 
 exec i3
