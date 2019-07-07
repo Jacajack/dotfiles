@@ -1,0 +1,16 @@
+#!/bin/bash
+
+PLUGIN_DIR="$HOME/.vim/bundle"
+REPO_LIST="$HOME/.vim/repo_list"
+
+while read url; do
+	dir=$(echo "$url" | cut -d/ -f 5 | sed 's/\.git//')
+	
+	# If it already exists
+	if cd "$PLUGIN_DIR/$dir"; then
+		git pull
+	else
+		cd "$PLUGIN_DIR"
+		git clone "$url" "$dir"
+	fi;
+done < "$REPO_LIST";
