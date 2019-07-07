@@ -1,2 +1,6 @@
 .wallpaper
 .wallpapers
+
+.vim
+.vim/autoload
+.vim/repo_list
