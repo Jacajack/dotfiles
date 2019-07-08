@@ -73,28 +73,15 @@ client.background       #ffffff
 
 
 # Resizing
-bindsym $mod+r mode "resize"
-mode "resize" {
-	bindsym Left resize shrink width 10 px or 10 ppt
-	bindsym Right resize grow width 10 px or 10 ppt
-	bindsym Down resize shrink height 10 px or 10 ppt
-	bindsym Up resize grow height 10 px or 10 ppt
-	
-	bindsym Return mode "default"
-	bindsym Escape mode "default"
-}
+bindsym $mod+Ctrl+Left resize shrink width 10 px or 10 ppt
+bindsym $mod+Ctrl+Right resize grow width 10 px or 10 ppt
+bindsym $mod+Ctrl+Down resize shrink height 10 px or 10 ppt
+bindsym $mod+Crtl+Up resize grow height 10 px or 10 ppt
 
 # Gaps control
-set $mode-gaps "gaps"
-bindsym $mod+g mode $mode-gaps
-mode $mode-gaps {
-	bindsym plus  gaps inner current plus 5
-	bindsym minus gaps inner current minus 5
-	bindsym 0     gaps inner current set 0
-
-	bindsym Return mode "default"
-	bindsym Escape mode "default"
-}
+bindsym $mod+Ctrl+plus  gaps inner current plus 5
+bindsym $mod+Ctrl+minus gaps inner current minus 5
+bindsym $mod+Ctrl+0     gaps inner current set 0
 
 # I have my own bar
 bar {
@@ -105,7 +92,7 @@ bar {
 bindsym $mod+q kill
 bindsym $mod+d exec dmenu_run
 bindsym $mod+Return exec $TERMINAL
-bindsym $mod+Shift+m exec urxvt -e ranger
+bindsym $mod+Shift+m exec $TERMINAL -e ranger
 
 # Startup
 exec --no-startup-id initwm
