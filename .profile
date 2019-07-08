@@ -1,12 +1,19 @@
-#!/bin/sh
+#!/bin/bash
+# This script runs on login.
+
+# Add ~/.local/bin to PATH
+export PATH="$PATH:$HOME/.local/bin"
 
 # Default programs
 export TERMINAL=xterm
 export BROWSER=firefox
 
-# Wallpaper locations
-export WALLPAPER_FILE="$HOME/.wallpaper"
+# Wallpapers directory
 export WALLPAPERS="$HOME/.wallpapers"
 
-# Add ~/.local/bin to PATH
-export PATH="$PATH:$HOME/.local/bin"
+# Read .bashrc
+[ -f "$HOME/.bashrc" ] && source "$HOME/.bashrc"
+
+# Start graphical server
+[ "$(tty)" = "/dev/tty1" ] && ! pgrep -x i3 > /dev/null && exec startx
+
