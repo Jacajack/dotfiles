@@ -1,3 +1,4 @@
 #!/bin/bash
 
-[[ -f "$WALLPAPER_FILE" ]] && wal -i "$(cat "$WALLPAPER_FILE")"
+# Load wallpaper from wal's cache
+wal -R
