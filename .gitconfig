@@ -1,0 +1,10 @@
+[user]
+	name = Jacek Wieczorek
+	email = mrjjot@gmail.com
+[core]
+	editor = vim
+[alias]
+	s = status
+	c = commit
+	a = add
+	d = diff
