@@ -11,4 +11,7 @@ fi
 # Run xcompmgr
 xcompmgr &
 
+# Enable numlock
+numlockx &
+
 exec i3 
