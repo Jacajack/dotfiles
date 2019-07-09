@@ -8,4 +8,7 @@ if [[ -f "$XRESOURCES" ]]; then
 	(echo "$XRESOURCES" | entr -p xrdb -merge -I$HOME "$XRESOURCES" ) &
 fi
 
-exec i3
+# Run xcompmgr
+xcompmgr &
+
+exec i3 
