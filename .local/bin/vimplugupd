@@ -3,6 +3,13 @@
 PLUGIN_DIR="$HOME/.vim/bundle"
 REPO_LIST="$HOME/.vim/repo_list"
 
+if [ ! -f "$REPO_LIST" ]; then
+	echo "There's no repo list - $REPO_LIST" 1&>2
+	exit 1;
+fi;
+
+[ ! -d "$PLUGIN_DIR" ] && mkdir "$PLUGIN_DIR";
+
 while read url; do
 	dir=$(echo "$url" | cut -d/ -f 5 | sed 's/\.git//')
 	
