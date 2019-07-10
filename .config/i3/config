@@ -2,7 +2,7 @@
 set $mod Mod4
 
 # Font
-# font pango:monospace 12
+font Fira Mono 12
 
 # Gaps
 hide_edge_borders both
@@ -11,27 +11,38 @@ gaps inner 10
 gaps outer 0
 smart_gaps on
 
-# Basic shortcuts
+# Focus control
 bindsym $mod+Left focus left
 bindsym $mod+Right focus right
 bindsym $mod+Up focus up
 bindsym $mod+Down focus down
+bindsym $mod+h focus left
+bindsym $mod+l focus right
+bindsym $mod+k focus up
+bindsym $mod+j focus down
 
+# Window movement
 bindsym $mod+Shift+Left move left
 bindsym $mod+Shift+Right move right
 bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Down move down
+bindsym $mod+Shift+h move left
+bindsym $mod+Shift+l move right
+bindsym $mod+Shift+k move up
+bindsym $mod+Shift+j move down
 
-bindsym $mod+h split h
+# Splitting control
+bindsym $mod+b split h
 bindsym $mod+v split v
 bindsym $mod+f fullscreen toggle
 
+# Reload / reset / exit
 bindsym $mod+Shift+c reload
 bindsym $mod+Shift+r restart
 bindsym $mod+Shift+e exec i3-msg exit
 
 # Floating windows
-floating_modifier mod1
+floating_modifier $mod
 bindsym $mod+Shift+space floating toggle
 bindsym $mod+space focus mode_toggle
 
@@ -76,7 +87,12 @@ client.background       #ffffff
 bindsym $mod+Ctrl+Left resize shrink width 10 px or 10 ppt
 bindsym $mod+Ctrl+Right resize grow width 10 px or 10 ppt
 bindsym $mod+Ctrl+Down resize shrink height 10 px or 10 ppt
-bindsym $mod+Crtl+Up resize grow height 10 px or 10 ppt
+bindsym $mod+Ctrl+Up resize grow height 10 px or 10 ppt
+bindsym $mod+Ctrl+h resize shrink width 10 px or 10 ppt
+bindsym $mod+Ctrl+l resize grow width 10 px or 10 ppt
+bindsym $mod+Ctrl+j resize shrink height 10 px or 10 ppt
+bindsym $mod+Ctrl+k resize grow height 10 px or 10 ppt
+
 
 # Gaps control
 bindsym $mod+Ctrl+plus  gaps inner current plus 5
@@ -90,9 +106,10 @@ bar {
 
 # Application shortcuts
 bindsym $mod+q kill
-bindsym $mod+d exec dmenu_run
-bindsym $mod+Return exec $TERMINAL
-bindsym $mod+Shift+m exec $TERMINAL -e ranger
+bindsym $mod+d exec --no-startup-id dmenu_run
+bindsym $mod+Return exec --no-startup-id $TERMINAL
+bindsym $mod+Shift+m exec --no-startup-id $TERMINAL -e ranger
+bindsym $mod+w exec --no-startup-id $BROWSER
 
 # Startup
 exec --no-startup-id initwm
