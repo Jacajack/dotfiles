@@ -1,0 +1,123 @@
+; All colors are taken from xrdb
+[colors]
+c0 = ${xrdb:color0:#000}
+c1 = ${xrdb:color1:#000}
+c2 = ${xrdb:color2:#000}
+c3 = ${xrdb:color3:#000}
+c4 = ${xrdb:color4:#000}
+c5 = ${xrdb:color5:#000}
+c6 = ${xrdb:color6:#000}
+c7 = ${xrdb:color7:#000}
+c8 = ${xrdb:color8:#000}
+c9 = ${xrdb:color9:#000}
+c10 = ${xrdb:color10:#000}
+c11 = ${xrdb:color11:#000}
+c12 = ${xrdb:color12:#000}
+c13 = ${xrdb:color13:#000}
+c14 = ${xrdb:color14:#000}
+c15 = ${xrdb:color15:#000}
+fg = ${self.c7}
+bg = ${self.c0}
+
+visible-workspace = ${self.c1}
+urgent-workspace = ${self.c1}
+date = ${self.c1}
+cpu = ${self.c2}
+audio = ${self.c3}
+memory = ${self.c4}
+
+;Base module format
+[base-format]
+padding = 1
+
+; My main bar
+[bar/main]
+width = 100%
+height = 25
+line-size = 4
+
+; Default colots
+foreground = ${colors.fg}
+background = ${colors.bg}
+
+; Fira Mono + Fontawesome
+font-0 = Fira Mono:size=11:weight=bold;0
+font-1 = Font Awesome 5 Free:style=solid:size=10;0
+
+; Paddings and margins
+padding = 1
+module-margin = 1
+
+; Modules
+modules-left = i3 
+modules-center = date
+modules-right = memory cpu audio
+
+;-------------------------------------------- modules
+
+[module/i3]
+type = internal/i3
+format = <label-state>
+index-sort = true
+
+; Active workspace on focused monitor
+label-focused = %index%
+label-focused-foreground = ${colors.bg}
+label-focused-background = ${colors.fg}
+label-focused-padding = 1
+
+; Inactive workspace on any monitor
+label-unfocused = %index%
+label-unfocused-foreground = ${colors.fg}
+label-unfocused-background = ${colors.bg}
+label-unfocused-padding = 1
+
+; Active workspace on unfocused monitor
+label-visible = %index%
+label-visible-foreground = ${colors.visible-workspace}
+label-visible-background = ${colors.bg}
+label-visible-padding = 1 
+
+; Workspace with urgency hint set
+label-urgent = %index%
+label-urgent-foreground = ${colors.fg}
+label-urgent-background = ${colors.bg}
+label-urgent-underline = ${colors.urgent-workspace}
+label-urgent-padding = 1 
+
+
+[module/date]
+type = internal/date
+interval = 1
+format-padding = ${base-format.padding}
+format-underline = ${colors.date}
+label = "%date%, %time%"
+date = "%a %d %b"
+time = "%H:%M"
+
+
+[module/cpu]
+type = internal/cpu
+interval = 1
+format-padding = ${base-format.padding}
+format-underline = ${colors.cpu}
+label = "CPU: %percentage:3%%"
+
+
+[module/audio]
+type = internal/pulseaudio
+interval = 1
+format-volume-padding = ${base-format.padding}
+format-muted-padding = ${base-format.padding}
+format-volume-underline = ${colors.audio}
+format-muted-underline = ${colors.audio}
+label-volume = "VOL: %percentage:3%%"
+label-muted = "MUT: %percentage:3%%"
+
+
+[module/memory]
+type = internal/memory
+interval = 1
+format-padding = ${base-format.padding}
+format-underline = ${colors.memory}
+label = "RAM: %percentage_used:3%%"
