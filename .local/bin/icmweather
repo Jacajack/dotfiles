@@ -1,0 +1,11 @@
+#!/bin/bash
+
+# Time and time 6 hours ago
+DATE=$(date +%s)
+FORECAST_DATE=$(($DATE-21600))
+
+# Grid coordinates
+ROW=463
+COL=213
+
+curl -s "http://www.meteo.pl/um/metco/mgram_pict.php?ntype=0u&fdate=$(date -d @$FORECAST_DATE +%Y%m%d)$(($(($(date -d @$FORECAST_DATE +%H)/6))*6))&row=$ROW&col=$COL&lang=pl" --output - | feh -
