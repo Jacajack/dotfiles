@@ -25,6 +25,7 @@ date = ${self.c1}
 cpu = ${self.c2}
 audio = ${self.c3}
 memory = ${self.c4}
+battery = ${self.c5}
 
 ;Base module format
 [base-format]
@@ -33,15 +34,15 @@ padding = 1
 ; My main bar
 [bar/main]
 width = 100%
-height = 25
-line-size = 4
+height = 20
+line-size = 3
 
-; Default colots
+; Default colors
 foreground = ${colors.fg}
 background = ${colors.bg}
 
 ; Fira Mono + Fontawesome
-font-0 = Fira Mono:size=11:weight=bold;0
+font-0 = Fira Mono:size=9:weight=bold;0
 font-1 = Font Awesome 5 Free:style=solid:size=10;0
 
 ; Paddings and margins
@@ -52,6 +53,11 @@ module-margin = 1
 modules-left = i3 
 modules-center = date
 modules-right = memory cpu audio
+
+; Laptop version
+[bar/laptop]
+inherit = bar/main
+modules-right = memory cpu audio battery
 
 ;-------------------------------------------- modules
 
@@ -121,3 +127,19 @@ interval = 1
 format-padding = ${base-format.padding}
 format-underline = ${colors.memory}
 label = "RAM: %percentage_used:3%%"
+
+[module/battery]
+type = internal/battery
+interval = 5
+full-at = 97
+battery = BAT0
+adapter = ADP1
+format-charging-padding = ${base-format.padding}
+format-discharging-padding = ${base-format.padding}
+format-full-padding = ${base-format.padding}
+format-charging-underline = ${colors.battery}
+format-discharging-underline = ${colors.battery}
+format-full-underline = ${colors.battery}
+label-charging = "CHG: %percentage:3%%"
+label-discharging = "BAT: %percentage:3%%"
+label-full = "BAT  FULL"
