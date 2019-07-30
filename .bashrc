@@ -10,6 +10,11 @@ shopt -s autocd
 HISTSIZE=
 HISTFILESIZE=
 
+# Aliases for colors
+alias ls='ls --color=auto'
+alias grep='grep --color=auto'
+alias diff='diff --color=auto'
+
 # ls aliases
 alias ll='ls -l'
 alias la='ls -A'
