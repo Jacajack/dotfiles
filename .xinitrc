@@ -11,6 +11,9 @@ fi
 # Run xcompmgr
 xcompmgr &
 
+# Polish keymap
+setxkbmap pl
+
 # Enable numlock
 numlockx &
 
