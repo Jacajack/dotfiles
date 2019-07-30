@@ -21,11 +21,11 @@ bg = ${self.c0}
 
 visible-workspace = ${self.c1}
 urgent-workspace = ${self.c1}
-date = ${self.c1}
-cpu = ${self.c2}
+date = ${self.c3}
+cpu = ${self.c3}
 audio = ${self.c3}
-memory = ${self.c4}
-battery = ${self.c5}
+memory = ${self.c3}
+battery = ${self.c3}
 
 ;Base module format
 [base-format]
