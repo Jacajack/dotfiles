@@ -5,10 +5,11 @@
 export PATH="$PATH:$HOME/.local/bin"
 
 # Default programs
-export TERMINAL=st
+export TERMINAL=best-terminal
 export BROWSER=firefox
 
-# Wallpapers directory
+# Wallpapers directory and terminal opacity
+export TERMINAL_OPACITY=85
 export WALLPAPERS="$HOME/.wallpapers"
 
 # Read .bashrc

@@ -3,4 +3,4 @@
 PICK="$(ls -1q "$WALLPAPERS" | dmenu -i -l 30)"
 [[ -z "$PICK" ]] && exit 0;
 
-wal -i "$WALLPAPERS/$PICK"
+wal -i "$WALLPAPERS/$PICK" -a "$TERMINAL_OPACITY"
