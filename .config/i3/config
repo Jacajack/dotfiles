@@ -104,12 +104,10 @@ bar {
 	mode invisible
 }
 
-# Application shortcuts
+# Basic and necessary application shortcuts (in case sxhkd doesn't start)
 bindsym $mod+q kill
 bindsym $mod+d exec --no-startup-id dmenu_run
 bindsym $mod+Return exec --no-startup-id $TERMINAL
-bindsym $mod+Shift+m exec --no-startup-id $TERMINAL -e ranger
-bindsym $mod+w exec --no-startup-id $BROWSER
 
 # Startup
 exec --no-startup-id initwm

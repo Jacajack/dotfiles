@@ -1,0 +1,11 @@
+super + w
+	$BROWSER
+
+super + m
+	$TERMINAL -e $FILE_BROWSER
+
+Print
+	scrot -e 'sshandler "$f"'
+
+shift + @Print
+	scrot -s -e 'sshandler "$f"'
