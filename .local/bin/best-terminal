@@ -1,10 +1,10 @@
 #!/bin/bash
 
-# urxvt
-[ -x "$(command -v urxvt)" ] && urxvt $@ & exit 0;
-
 # st (with my opacity patch)
 [ -x "$(command -v st)" ] && ST_ALPHA="$(echo "scale=4; $TERMINAL_OPACITY/100.0" | bc)" st $@ & exit 0;
+
+# urxvt
+[ -x "$(command -v urxvt)" ] && urxvt $@ & exit 0;
 
 # xterm
 [ -x "$(command -v xterm)" ] && xterm $@ & exit 0;
