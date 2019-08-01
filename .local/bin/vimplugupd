@@ -5,15 +5,19 @@
 # Also, unwanted plugins need to be removed manually
 
 VIM_DIR="$HOME/.vim"
+AUTOLOAD_DIR="$VIM_DIR/autoload"
 PLUGIN_DIR="$VIM_DIR/bundle"
 REPO_LIST="$VIM_DIR/repo_list"
 PATHOGEN_REPO="https://github.com/tpope/vim-pathogen.git"
 
+# Check if autoload exists
+[ ! -d "$AUTOLOAD_DIR" ] && mkdir "$AUTOLOAD_DIR";
+
 # Clone pathogen
-if [ ! -f "$VIM_DIR/autoload/pathogen.vim" ]; then
+if [ ! -f "$AUTOLOAD_DIR/pathogen.vim" ]; then
 	TMP_DIR="$(mktemp -d)"
 	git clone "$PATHOGEN_REPO" "$TMP_DIR"
-	cp "$TMP_DIR/autoload/pathogen.vim" "$VIM_DIR/autoload"
+	cp "$TMP_DIR/autoload/pathogen.vim" "$AUTOLOAD_DIR"
 	rm -rf "$TMP_DIR"
 fi
 
