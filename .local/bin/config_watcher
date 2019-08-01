@@ -1,0 +1,7 @@
+#!/bin/bash
+# This script watches config files and
+# triggers update actions where possible
+
+exec echo "$HOME/.Xresources" | entr -p xrdb "$HOME/.Xresources" &
+exec echo "$HOME/.config/sxhkd/sxhkdrc" | entr -p pkill -USR1 sxhkd &
+
