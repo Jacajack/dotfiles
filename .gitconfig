@@ -1,6 +1,3 @@
-[user]
-	name = Jacek Wieczorek
-	email = mrjjot@gmail.com
 [core]
 	editor = vim
 [alias]
@@ -8,3 +5,5 @@
 	c = commit
 	a = add
 	d = diff
+[include]
+	path = .gitconfig-private
