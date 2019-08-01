@@ -10,10 +10,12 @@ REPO_LIST="$VIM_DIR/repo_list"
 PATHOGEN_REPO="https://github.com/tpope/vim-pathogen.git"
 
 # Clone pathogen
-TMP_DIR="$(mktemp -d)"
-git clone "$PATHOGEN_REPO" "$TMP_DIR"
-cp "$TMP_DIR/autoload/pathogen.vim" "$VIM_DIR/autoload"
-rm -rf "$TMP_DIR"
+if [ ! -f "$VIM_DIR/autoload/pathogen.vim" ]; then
+	TMP_DIR="$(mktemp -d)"
+	git clone "$PATHOGEN_REPO" "$TMP_DIR"
+	cp "$TMP_DIR/autoload/pathogen.vim" "$VIM_DIR/autoload"
+	rm -rf "$TMP_DIR"
+fi
 
 # Check if plugin list is present
 if [ ! -f "$REPO_LIST" ]; then
