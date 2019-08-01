@@ -1,4 +1,8 @@
 #!/bin/bash
+# Changes wallpaper based on provided argument
+# Terminal background is always black, because it looks better
+# Opacity is also taken into account
 
-# Load wallpaper from wal's cache
-wal -R
+if [[ ! -z "$1" ]]; then
+	wal -b '#000000' -i "$1" -a "$TERMINAL_OPACITY"
+fi

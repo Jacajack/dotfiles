@@ -1,6 +1,6 @@
 #!/bin/bash
 
-PICK="$(ls -1q "$WALLPAPERS" | dmenu -i -l 30)"
+PICK="$(cd "$WALLPAPERS" && ls | sxiv -tio | head -n 1)"
 [[ -z "$PICK" ]] && exit 0;
 
 setwal "$WALLPAPERS/$PICK"
