@@ -7,6 +7,16 @@ export PATH="$PATH:$HOME/.local/bin"
 # Default programs
 export TERMINAL=best-terminal
 export BROWSER=firefox
+export FILE_BROWSER=mc
+
+# Important directories
+export DOWNLOADS_DIR="$HOME/dl"
+export DOCUMENTS_DIR="$HOME/doc"
+export IMAGES_DIR="$HOME/img"
+export VIDEOS_DIR="$HOME/vid"
+export PUBLIC_DIR="$HOME/pub"
+export MUSIC_DIR="$HOME/music"
+export SCREENSHOT_DIR="$IMAGES_DIR/ss"
 
 # Wallpapers directory and terminal opacity
 export TERMINAL_OPACITY=85
