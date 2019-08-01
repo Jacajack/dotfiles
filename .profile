@@ -7,7 +7,7 @@ export PATH="$PATH:$HOME/.local/bin"
 # Default programs
 export TERMINAL=best-terminal
 export BROWSER=firefox
-export FILE_BROWSER=mc
+export FILE_BROWSER=$TERMINAL -e mc
 
 # Important directories
 export DOWNLOADS_DIR="$HOME/dl"

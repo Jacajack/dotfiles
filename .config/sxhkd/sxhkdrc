@@ -2,7 +2,7 @@ super + w
 	$BROWSER
 
 super + m
-	$TERMINAL -e $FILE_BROWSER
+	$FILE_BROWSER
 
 Print
 	scrot -e 'sshandler "$f"'
