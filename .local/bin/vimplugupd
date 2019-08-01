@@ -1,20 +1,35 @@
 #!/bin/bash
+# This script downloads vim plugins and Pathogen
+# based on list in file pointed by $REPO_LIST
 
-PLUGIN_DIR="$HOME/.vim/bundle"
-REPO_LIST="$HOME/.vim/repo_list"
+# Also, unwanted plugins need to be removed manually
 
+VIM_DIR="$HOME/.vim"
+PLUGIN_DIR="$VIM_DIR/bundle"
+REPO_LIST="$VIM_DIR/repo_list"
+PATHOGEN_REPO="https://github.com/tpope/vim-pathogen.git"
+
+# Clone pathogen
+TMP_DIR="$(mktemp -d)"
+git clone "$PATHOGEN_REPO" "$TMP_DIR"
+cp "$TMP_DIR/autoload/pathogen.vim" "$VIM_DIR/autoload"
+rm -rf "$TMP_DIR"
+
+# Check if plugin list is present
 if [ ! -f "$REPO_LIST" ]; then
 	echo "There's no repo list - $REPO_LIST" 1&>2
 	exit 1;
 fi;
 
+# Create plug dir if it doesn't exist
 [ ! -d "$PLUGIN_DIR" ] && mkdir "$PLUGIN_DIR";
 
+# Pull or clone all plugins (not listed ones are not removed!)
 while read url; do
 	dir=$(echo "$url" | cut -d/ -f 5 | sed 's/\.git//')
 	
 	# If it already exists
-	if cd "$PLUGIN_DIR/$dir"; then
+	if cd "$PLUGIN_DIR/$dir" 2>/dev/null; then
 		git pull
 	else
 		cd "$PLUGIN_DIR"
