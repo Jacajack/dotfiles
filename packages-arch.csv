@@ -14,6 +14,7 @@
 ,scrot,"screenshot utility"
 ,imagemagick,"image processing in terminal"
 ,sxiv,"image viewer"
+,dunst,"for notifications"
 ,vim,"great text editor"
 ,locate,"for locating files"
 ,bash-completion,"improved bash autocompletion"
