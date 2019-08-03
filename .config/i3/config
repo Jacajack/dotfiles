@@ -111,5 +111,8 @@ bindsym $mod+q kill
 bindsym $mod+d exec --no-startup-id dmenu_run
 bindsym $mod+Return exec --no-startup-id $TERMINAL
 
+# Some applications should be floating
+for_window [class="Kicad"] floating enable
+
 # Startup
 exec --no-startup-id initwm
