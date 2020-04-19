@@ -1,5 +1,6 @@
 # Braces
 --attach-extern-c
+--attach-namespaces
 --style=allman
 
 # Indentation
