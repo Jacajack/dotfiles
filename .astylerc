@@ -1,0 +1,26 @@
+# Braces
+--attach-extern-c
+--style=allman
+
+# Indentation
+--indent=tab=4
+--indent-switches
+--convert-tabs
+--indent-preproc-define
+--indent-col1-comments
+--min-conditional-indent=0
+
+# Padding
+--pad-oper
+--pad-comma
+--pad-header
+--unpad-paren
+
+# Templates
+--close-templates 
+
+# Other
+--align-pointer=name
+--align-reference=none
+--keep-one-line-blocks
+--keep-one-line-statements

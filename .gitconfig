@@ -1,9 +1,14 @@
 [core]
 	editor = vim
+
 [alias]
 	s = status
 	c = commit
 	a = add
 	d = diff
+
+[commit]
+	gpgsign = true
+	
 [include]
 	path = .gitconfig-private

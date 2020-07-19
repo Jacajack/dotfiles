@@ -95,4 +95,9 @@ let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 
- 
+" Ctrl+i Ctrl+a to insert one char
+nmap <C-a> i_<Esc>r
+nmap <C-a> a_<Esc>r
+
+" Filetype dependent stuff
+filetype plugin on
