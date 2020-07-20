@@ -6,9 +6,6 @@
 	c = commit
 	a = add
 	d = diff
-
-[commit]
-	gpgsign = true
 	
 [include]
 	path = .gitconfig-private
