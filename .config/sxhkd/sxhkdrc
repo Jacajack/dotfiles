@@ -4,6 +4,12 @@ super + w
 super + m
 	$FILE_BROWSER
 
+super + shift + w
+	changewal
+
+super + control + shift + w
+	vchangewal
+
 Print
 	scrot -e 'sshandler "$f"'
 
