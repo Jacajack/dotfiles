@@ -33,7 +33,7 @@ nnoremap K :Man <cword><CR>
 "Gruvbox
 syntax on
 filetype plugin indent on
-colorscheme gruvbox
+"colorscheme gruvbox
 set background=dark
 set nocursorcolumn
 set nocursorline
@@ -101,3 +101,7 @@ nmap <C-a> a_<Esc>r
 
 " Filetype dependent stuff
 filetype plugin on
+
+"Gutter colors
+highlight SignColumn ctermbg=black
+
