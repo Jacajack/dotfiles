@@ -112,13 +112,13 @@ label = "CPU: %percentage:3%%"
 
 [module/audio]
 type = internal/pulseaudio
-interval = 1
+interval = 5
 format-volume-padding = ${base-format.padding}
 format-muted-padding = ${base-format.padding}
 format-volume-underline = ${colors.audio}
 format-muted-underline = ${colors.audio}
 label-volume = "VOL: %percentage:3%%"
-label-muted = "MUT: %percentage:3%%"
+label-muted = "VOL: ----"
 
 
 [module/memory]
