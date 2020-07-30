@@ -2,8 +2,8 @@
 This repository contains my dotfiles.
 
 I'm still working on them, so it's incomplete, but here are the results I got so far:<br>
-<img width=80% src=https://i.imgur.com/egw89gv.png></img>
-<img width=80% src=https://i.imgur.com/HjSiY0m.png></img>
+<img src=https://i.imgur.com/egw89gv.png></img>
+<img src=https://i.imgur.com/HjSiY0m.png></img>
 
 Application shortcuts:
  - <kbd>Super</kbd> + <kbd>Return</kbd> - Terminal (`best-terminal`)
@@ -28,6 +28,10 @@ i3 shortcuts:
  - <kbd>Super</kbd> + <kbd>Space</kbd> - Switch background/foreground focus
  - <kbd>Super</kbd> + <kbd>V</kbd> - Vertical splitting
  - <kbd>Super</kbd> + <kbd>B</kbd> - Horizontal splitting
+ - <kbd>Super</kbd> + <kbd>\</kbd> - Close most recent notification
+ - <kbd>Super</kbd> + <kbd>Shift</kbd> + <kbd>\</kbd> - Close all notifications
+ - <kbd>Super</kbd> + <kbd>]</kbd> - Redisplay notification
+ - <kbd>Super</kbd> + <kbd>Shift</kbd> + <kbd>]</kbd> - Notification context menu
  
  - <kbd>Super</kbd> + <kbd>&#8592;</kbd><kbd>&#8593;</kbd><kbd>&#8594;</kbd><kbd>&#8595;</kbd><kbd>H</kbd><kbd>J</kbd><kbd>K</kbd><kbd>L</kbd> - Change focused window
  - <kbd>Super</kbd> + <kbd>Shift</kbd> + <kbd>&#8592;</kbd><kbd>&#8593;</kbd><kbd>&#8594;</kbd><kbd>&#8595;</kbd><kbd>H</kbd><kbd>J</kbd><kbd>K</kbd><kbd>L</kbd> - Rearrange windows
