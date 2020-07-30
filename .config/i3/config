@@ -68,7 +68,7 @@ bindsym $mod+Shift+7 move container to workspace 7
 bindsym $mod+Shift+8 move container to workspace 8
 bindsym $mod+Shift+9 move container to workspace 9
 bindsym $mod+Shift+0 move container to workspace 0
-bindsym $mod+Tab move container to workspace back_and_forth
+bindsym $mod+Shift+Tab move container to workspace back_and_forth
 
 # Colors
 set $col-act-bg     #aaaaaa
@@ -113,6 +113,11 @@ bindsym $mod+Return exec --no-startup-id $TERMINAL
 
 # Some applications should be floating
 for_window [class="Kicad"] floating enable
+for_window [class="rt"] floating enable
+
+# Scratchpad
+bindsym $mod+x move scratchpad
+bindsym $mod+z scratchpad show
 
 # Startup
 exec --no-startup-id initwm
