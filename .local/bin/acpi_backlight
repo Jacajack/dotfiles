@@ -1,0 +1,26 @@
+#!/bin/bash
+# A custom bash script for backlight control
+# via the hardware interface
+# Usage example: acpi_backlight 'CURRENT + MAX * 0.1'
+
+BACKLIGHT_DEV="${BACKLIGHT_DEV:-/sys/class/backlight/amdgpu_bl0}"
+
+CURRENT=$(cat "$BACKLIGHT_DEV/brightness")
+MAX=$(cat "$BACKLIGHT_DEV/max_brightness")
+BC_COMMAND=$(echo "$1" | sed "s/MAX/$MAX/" | sed "s/CURRENT/$CURRENT/")
+NEW=$(echo "$BC_COMMAND" | bc)
+
+# Clamp to 0 and MAX
+CLAMP_BC_COMMAND="
+scale = 0
+define max(a, b){if (a > b){return (a);}else{return(b);}}
+define min(a, b){if (a < b){return (a);}else{return(b);}}
+max(min($NEW, $MAX), 0) / 1"
+CLAMPED=$(echo "$CLAMP_BC_COMMAND" | bc)
+
+# Write
+echo "$CLAMPED" > "$BACKLIGHT_DEV/brightness"
+
+# Print current and max
+echo $CLAMPED $MAX
+
