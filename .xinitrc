@@ -8,9 +8,6 @@ if [[ -f "$XRESOURCES" ]]; then
 	(echo "$XRESOURCES" | entr -p xrdb -merge -I$HOME "$XRESOURCES" ) &
 fi
 
-# Run xcompmgr
-xcompmgr &
-
 # Polish keymap
 setxkbmap pl
 

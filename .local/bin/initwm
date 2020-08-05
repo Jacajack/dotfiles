@@ -5,3 +5,4 @@ exec sxhkd -c .config/sxhkd/sxhkdrc &
 exec wal -R &
 exec polybar -c "$HOME/.config/polybar/config" laptop &
 exec config_watcher &
+exec picom &
