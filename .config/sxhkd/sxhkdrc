@@ -25,6 +25,15 @@ XF86AudioLowerVolume
 XF86AudioRaiseVolume
 	pactl set-sink-mute @DEFAULT_SINK@ false ; pactl set-sink-volume @DEFAULT_SINK@ +5%
 
+XF86AudioPlay
+	playerctl play-pause
+
+XF86AudioPrev
+	playerctl previous
+
+XF86AudioNext
+	playerctl next
+
 XF86MonBrightnessDown
 	acpi_backlight "CURRENT * 0.8"
 
