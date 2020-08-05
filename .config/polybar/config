@@ -26,6 +26,8 @@ cpu = ${self.c3}
 audio = ${self.c3}
 memory = ${self.c3}
 battery = ${self.c3}
+network = ${self.c3}
+network-disconnected = ${self.c4}
 
 ;Base module format
 [base-format]
@@ -57,7 +59,7 @@ modules-right = memory cpu audio
 ; Laptop version
 [bar/laptop]
 inherit = bar/main
-modules-right = memory cpu audio battery
+modules-right = network memory cpu audio battery
 
 ;-------------------------------------------- modules
 
@@ -143,3 +145,16 @@ format-full-underline = ${colors.battery}
 label-charging = "CHG: %percentage:3%%"
 label-discharging = "BAT: %percentage:3%%"
 label-full = "BAT  FULL"
+
+[module/network]
+type = internal/network
+interface = wlo1
+format-connected = <label-connected> 
+format-connected-padding = ${base-format.padding}
+format-connected-underline = ${colors.network}
+format-disconnected = <label-disconnected>
+format-disconnected-padding = ${base-format.padding}
+format-disconnected-underline = ${colors.network-disconnected}
+label-connected = %essid%
+label-disconnected = NO CONN
+
