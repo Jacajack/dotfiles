@@ -1,0 +1,2 @@
+#!/bin/bash
+dmenu -fn 'Fira Mono:size=14' -sb "$(tail -n+4 "$HOME/.cache/wal/colors" | head -n1)" -nb '#000000' "$@"

@@ -108,7 +108,7 @@ bar {
 
 # Basic and necessary application shortcuts (in case sxhkd doesn't start)
 bindsym $mod+q kill
-bindsym $mod+d exec --no-startup-id dmenu_run
+bindsym $mod+d exec --no-startup-id themed_dmenu_run
 bindsym $mod+Return exec --no-startup-id $TERMINAL
 
 # Some applications should be floating
