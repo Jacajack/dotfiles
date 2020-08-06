@@ -4,5 +4,6 @@
 # Opacity is also taken into account
 
 if [[ ! -z "$1" ]]; then
-	wal -b '#000000' -i "$1" -a "$TERMINAL_OPACITY"
+	wal -b '#000000' -i "$1" -a "$TERMINAL_OPACITY" &
+	betterlockscreen -u "$1" &
 fi

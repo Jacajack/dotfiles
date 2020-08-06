@@ -10,6 +10,9 @@ super + shift + w
 super + control + shift + w
 	vchangewal
 
+super + alt + l
+	betterlockscreen --lock blur --off 5
+
 Print
 	scrot -e 'sshandler "$f"'
 
