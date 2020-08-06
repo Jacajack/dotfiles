@@ -37,8 +37,8 @@ XF86AudioPrev
 XF86AudioNext
 	playerctl next
 
-XF86MonBrightnessDown
+{XF86MonBrightnessDown, super + F2}
 	acpi_backlight "CURRENT * 0.8"
 
-XF86MonBrightnessUp
+{XF86MonBrightnessUp, super + F3}
 	acpi_backlight "CURRENT * 1.2 + 1"
