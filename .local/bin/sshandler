@@ -1,0 +1,6 @@
+#!/bin/bash
+# Handles taken screenshots - copies to clipboard and sends a notifiaction
+# Screenshot file expected as $1
+
+xclip -t image/png -selection clipboard -i "$1"
+notify-send "Screenshot saved" "$1"
