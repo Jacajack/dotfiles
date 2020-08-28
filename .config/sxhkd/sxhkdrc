@@ -19,6 +19,9 @@ super + p
 super + shift + p
 	xinput disable "$XINPUT_TOUCHSCREEN"
 
+super + control + q
+	powermenu
+
 Print
 	maim | sshandler
 

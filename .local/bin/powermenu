@@ -1,0 +1,3 @@
+#!/bin/bash
+CHOICE=$(echo -ne "poweroff\nreboot\nhibernate\nsuspend" | themed_dmenu -i)
+[ -z $CHOICE ] || systemctl $CHOICE;
