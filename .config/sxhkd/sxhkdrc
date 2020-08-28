@@ -13,11 +13,17 @@ super + control + shift + w
 super + alt + l
 	betterlockscreen --lock blur --off 5
 
+super + p
+	xinput enable "$XINPUT_TOUCHSCREEN"
+
+super + shift + p
+	xinput disable "$XINPUT_TOUCHSCREEN"
+
 Print
-	scrot -e 'sshandler "$f"'
+	maim | sshandler
 
 shift + @Print
-	scrot -s -e 'sshandler "$f"'
+	maim -s | sshandler
 
 XF86AudioMute
 	pactl set-sink-mute @DEFAULT_SINK@ toggle
@@ -42,3 +48,4 @@ XF86AudioNext
 
 {XF86MonBrightnessUp, super + F3}
 	acpi_backlight "CURRENT * 1.2 + 1"
+

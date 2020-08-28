@@ -1,6 +1,12 @@
 #!/bin/bash
 # Handles taken screenshots - copies to clipboard and sends a notifiaction
-# Screenshot file expected as $1
+# PNG screenshot data from maim expected on stdin
 
-xclip -t image/png -selection clipboard -i "$1"
-notify-send "Screenshot saved" "$1"
+# Check if screenshot dir exists and create if it doesn't
+[[ -d "$SCREENSHOT_DIR" ]] || mkdir "$SCREENSHOT_DIR"
+
+# The new filepath
+f="$SCREENSHOT_DIR/$(date +Screenshot_%Y%m%d_%H%M%S.png)"
+
+tee "$f" | xclip -t image/png -selection clipboard
+notify-send "Screenshot saved" "$f"
