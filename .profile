@@ -23,6 +23,9 @@ export SCREENSHOT_DIR="$IMAGES_DIR/ss"
 export TERMINAL_OPACITY=85
 export WALLPAPERS="$HOME/.wallpapers"
 
+# Fonts
+export ST_FONT='Fira Mono:size=10:antialias=true:autohint=true'
+
 # Read .bashrc
 [ -f "$HOME/.bashrc" ] && source "$HOME/.bashrc"
 
