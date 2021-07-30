@@ -79,6 +79,9 @@ set number
 "Mouse
 set mouse=a
 
+"Mouse fix for st
+set ttymouse=sgr
+
 "Airline config
 set guifont=Liberation\ Mono\ for\ Powerline\ 10 
 let g:airline_powerline_fonts = 0
