@@ -3,6 +3,13 @@
 exec dunst &
 exec sxhkd -c .config/sxhkd/sxhkdrc &
 exec wal -R &
-exec polybar -c "$HOME/.config/polybar/config" laptop &
+exec polybar -c "$HOME/.config/polybar/config-siji" laptop &
 exec config_watcher &
-exec picom &
+
+# Run selected compositor
+if [[ $COMPOSITOR == "xcompmgr" ]]; then
+	exec xcompmgr &
+elif [[ $COMPOSITOR == "picom" ]]; then
+	exec picom &
+fi
+
