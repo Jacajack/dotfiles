@@ -1,0 +1,11 @@
+#!/bin/bash
+
+# Katalog z memiorami
+MEMEDIR="$HOME/.memetron"
+
+# Poprawione - xclip -i się zawieszał, jak nie dostał nazwy pliku (tylko sam katalog)
+FILENAME="$(ls "$MEMEDIR" | dmenu -i -l 15)"
+if [[ -z "$FILENAME"N ]]; then exit 1; fi;
+
+# because fucking jpg doesn't work
+convert "$MEMEDIR/$FILENAME" png:- | xclip -selection clipboard -t "image/png"
