@@ -44,7 +44,7 @@ diffutils
 discord # src:trizen
 dmenu
 dos2unix
-dosbox # cat:emulator
+dosbox # cat:emulators
 dosfstools
 downgrade
 droidcam # src:trizen cat:misc
@@ -62,7 +62,7 @@ filelight
 firefox
 freecad # cat:cad
 freepats-general-midi
-fuse-emulator # cat:emulator
+fuse-emulator # cat:emulators
 gamemode
 gaupol # cat:misc
 gawk
@@ -160,7 +160,7 @@ pxz-git # src:trizen
 python2-pip
 python-pip
 qcad # cat:cad
-qemu-desktop # cat:emlators
+qemu-desktop # cat:emulators
 qjackctl # cat:audio
 ranger # cat:rice
 r # cat:sci
