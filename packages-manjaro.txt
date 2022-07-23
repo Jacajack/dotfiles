@@ -1,0 +1,258 @@
+
+0ad # cat:games
+afl # cat:dev
+allegro # cat:libs
+alsa-utils
+archivemount
+archivemount
+arm-none-eabi-gcc # cat:dev-arm
+arm-none-eabi-gdb # cat:dev-arm
+asciinema # cat:misc
+aseprite # src:trizen cat:art
+aspell
+aspell-en
+aspell-pl
+assimp # cat:libs
+astyle
+at
+audacity
+avrdude # cat:dev-avr
+avr-gcc # cat:dev-avr
+avr-gdb # cat:dev-avr
+avr-libc # cat:dev-avr
+bash-completion
+bat
+beamer-theme-metropolis # src:trizen cat:latex
+binutils # cat:dev
+blender # cat:3d
+borg
+bzip2
+calc
+chocolate-doom # cat:games src:trizen
+clamav # cat:security
+clamtk # cat:security
+clang
+cmake
+coreutils
+cppcheck # cat:dev
+cura-appimage-bin # src:trizen cat:3d-print
+cutecom
+darktable # cat:art
+dialog
+diffpdf
+diffutils
+discord # src:trizen
+dmenu
+dos2unix
+dosbox # cat:emulator
+dosfstools
+downgrade
+droidcam # src:trizen cat:misc
+dunst # cat:rice
+encfs
+entr
+espeak
+esp-idf # cat:dev-esp
+esptool # cat:dev-esp
+expect
+feh # cat:rice
+ffmpeg
+figlet
+filelight
+firefox
+freecad # cat:cad
+freepats-general-midi
+fuse-emulator # cat:emulator
+gamemode
+gaupol # cat:misc
+gawk
+gcc
+gdb
+gimp # cat:art
+git
+glfw # cat:libs
+glfw-x11 # cat:libs
+glm # cat:libs
+gnuplot
+google-earth-pro # cat:misc src:trizen
+gource # cat:misc src:trizen
+gpick
+gummi # cat:latex
+guvcview # cat:misc
+gzip
+hardcode-fixer
+heaptrack # cat:dev
+htop
+i3-gaps # cat:rice
+indent
+inkscape # cat:art
+inxi
+iotop
+jailif # src:custom
+kcachegrind # cat:dev
+kdeconnect
+kdenlive # cat:video
+kicad # cat:eda
+krita # cat:art
+lcov # cat:dev
+lemonbar # cat:rice
+lldb # cat:dev
+lmms # cat:music
+logisim # cat:eda
+love
+ltrace
+lynx
+maim # cat:rice
+mangohud
+massif-visualizer # cat:dev
+mc
+meld
+mesa-utils
+midictl # src:custom
+minecraft-launcher # src:trizen cat:games
+mingw-w64-gcc # cat:dev-win
+mold
+moreutils
+mpd # cat:rice
+mtpfs
+mupdf-tools
+nano
+nasm # cat:dev
+net-tools
+nlohmann-json # cat:libs
+nmap
+nordvpn-bin # src:trizen
+octave # cat:sci
+octave-symbolic # cat:sci
+openocd # cat:dev-arm
+openrct2 # cat:games
+openrocket # cat:cad
+openscad # cat:cad
+openssh
+opentrack # cat:flight-sim
+openttd # cat:games
+openttd-opengfx # cat:games
+openttd-opensfx # cat:games
+opera
+p7zip
+pandoc
+par
+pass
+pastebinit
+patch
+pavucontrol-qt
+pdftk
+peek # cat:video
+perf # cat:dev
+perl-image-exiftool
+perl-rename
+picom # cat:rice
+pigz
+pinta
+playerctl
+playonlinux
+plocate
+powertop
+protontricks # cat:games src:trizen
+pureref # cat:art src:trizen
+pv
+pxz-git # src:trizen
+python2-pip
+python-pip
+qcad # cat:cad
+qemu-desktop # cat:emlators
+qjackctl # cat:audio
+ranger # cat:rice
+r # cat:sci
+renderdoc # cat:dev
+rkhunter # cat:security
+rocksndiamonds # cat:games 
+rockyou # cat:hack
+rsync
+rustup # cat:dev
+sagemath # cat:sci
+samba
+samsung-unified-driver # cat:print src:trizen
+screen
+screenfetch
+scrot # cat:rice
+sfml
+simplescreenrecorder # cat:video
+skanlite # cat:print
+sloccount
+soundfont-fluid
+sox
+spotify # src:trizen
+sshfs
+steam # cat:games 
+stm32cubemx # cat:dev-arm src:trizen
+strace
+sxhkd # cat:rice
+sxiv # cat:rice
+tar
+tbb # cat:libs
+testdisk
+texinfo # cat:latex
+texlive-bibtexextra # cat:latex
+texlive-core # cat:latex
+texlive-fontsextra # cat:latex
+texlive-formatsextra # cat:latex
+texlive-games # cat:latex
+texlive-humanities # cat:latex
+texlive-langchinese # cat:latex
+texlive-langcyrillic # cat:latex
+texlive-langextra # cat:latex
+texlive-langgreek # cat:latex
+texlive-langjapanese # cat:latex
+texlive-langkorean # cat:latex
+texlive-latexextra # cat:latex
+texlive-music # cat:latex
+texlive-pictures # cat:latex
+texlive-pstricks # cat:latex
+texlive-publishers # cat:latex
+texlive-science # cat:latex
+texlive-tikz-uml # cat:latex
+thunderbird
+timidity++
+tmux
+torbrowser-launcher # src:trizen
+traceroute
+tracy # cat:dev src:trizen
+tree
+trizen 
+ttf-droid
+ttf-fira-mono
+ttf-font-awesome
+ttf-ubuntu-font-family
+uncrustify # cat:dev
+unigine-heaven # cat:benchmark
+unrar
+unzip
+usbip
+v4l2loopback-dkms # cat:kernel
+valgrind # cat:dev
+vim
+virtualbox # cat:emulators
+virtualbox-ext-oracle # cat:emulators
+virtualbox-guest-iso # cat:emulators
+visual-studio-code-bin # cat:dev src:trizen
+vlc
+vmpk # cat:music
+vulkan-extra-layers
+vulkan-extra-tools
+vulkan-html-docs
+vulkan-validation-layers
+wakeonlan
+wine
+xclip
+xdotool
+xorg-xkill
+xournalpp
+xterm # cat:rice
+xz
+yoshimi # cat:music
+youtube-dl
+zathura # cat:rice
+zathura-pdf-mupdf # cat:rice
+zerotier-one
+zip
